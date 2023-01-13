@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  nodejs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nodejs
+    container_name: nodejs-docker-test
+    restart: unless-stopped
+    ports:
+      - "8585:8585"
+    command: node server.js
