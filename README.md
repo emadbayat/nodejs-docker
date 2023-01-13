@@ -1,2 +1,2 @@
 # nodejs-docker
-A containerized NodeJS+Express with docker
+A containerized NodeJS+Express server with docker
