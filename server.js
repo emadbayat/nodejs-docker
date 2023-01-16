@@ -1,4 +1,6 @@
 import express from 'express';
+import morgan from 'morgan'
+
 
 //express configs
 const app = express();
@@ -15,6 +17,9 @@ function initServer(PORT) {
         }
     );
 }
+
+// app.use(morgan('combined'))
+app.use(morgan('[:date[iso]] :status :url'))
 
 app.get("/hello", function (req, res, next) {
     if (req.query.name) {
