@@ -2,7 +2,7 @@ import express from 'express';
 
 //express configs
 const app = express();
-const PORT = 8585;
+const PORT = process.env.SERVER_PORT || 8080;
 
 initServer(PORT);
 
