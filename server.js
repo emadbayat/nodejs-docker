@@ -18,7 +18,6 @@ function initServer(PORT) {
     );
 }
 
-// app.use(morgan('combined'))
 app.use(morgan('[:date[iso]] :status :url'))
 
 app.get("/hello", function (req, res, next) {
